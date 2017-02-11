@@ -27,7 +27,7 @@ app.get('/new/*',function(req,res){
 	    			collection.find({actual_url : url},{_id:1,actual_url:1}).toArray(
 	    				function(err,result){
 	    					console.log(result[0]['_id']);
-	    					res.json({actual_url : url,shortened: appUrl+result[0]['_id']})
+	    					res.json({actual_url : url,shortened: appUrl+"get/"+result[0]['_id']})
 	    				})	    			
 	    		}
     		)
@@ -37,7 +37,7 @@ app.get('/new/*',function(req,res){
 	}
 })
 
-app.get('/*',function(req,res){
+app.get('/get/*',function(req,res){
 	var id = req.params[0].toString();
 	//res.send(id);
 	mongo.connect("mongodb://server:server123@ds149329.mlab.com:49329/urlsh",function(err,db){
