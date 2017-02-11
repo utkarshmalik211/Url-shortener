@@ -42,8 +42,7 @@ app.get('/*',function(req,res){
 	//res.send(id);
 	mongo.connect("mongodb://server:server123@ds149329.mlab.com:49329/urlsh",function(err,db){
 			var collection = db.collection('url');
-			var objid = "ObjectID("+id+")";
-			//new objectID(id);
+			var objid = new objectID(id);
 			collection.find({'_id': objid},{_id:1,actual_url:1}).toArray(function(err,result){
 				res.redirect(301,result[0]['actual_url']);
 				console.log(result);//['actual_url']);
