@@ -1,0 +1,17 @@
+{
+  "name": "url-shortener",
+  "version": "1.0.0",
+  "description": "Returns a shortened url for a valid url or redirects to a url if shortened url is used",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.14.1",
+    "mongodb": "^2.2.22",
+    "pug": "^2.0.0-beta11",
+    "valid-url": "^1.0.9"
+  }
+}
