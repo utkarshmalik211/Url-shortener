@@ -4,6 +4,7 @@
   "description": "Returns a shortened url for a valid url or redirects to a url if shortened url is used",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "test": "node index.js"
   },
   "author": "",
