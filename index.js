@@ -4,7 +4,7 @@ var mongo = require('mongodb').MongoClient;
 var objectID = require('mongodb').ObjectID;
 var validUrl = require('valid-url');
 
-var appUrl = "http://localhost:3000/";
+var appUrl = "https://warm-stream-60687.herokuapp.com/";
 var app = express();
 var port = process.env.PORT || 8080;
 app.set('view engine','pug');
